@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — HuntArts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 950: '#060d1a', 900: '#0a1628', 800: '#0f2137' },
+            cyan: { 400: '#22d3ee', 500: '#06b6d4' },
+            gold: { 400: '#fbbf24', 500: '#f59e0b' }
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], display: ['Montserrat', 'Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .glass { background: rgba(15, 33, 55, 0.65); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background: linear-gradient(90deg,#22d3ee,#fbbf24); transition: width 0.3s; }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+  </style>
+</head>
+<body class="bg-navy-950 text-white font-sans antialiased">
+  <nav class="fixed top-0 inset-x-0 z-50 glass">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/file_0000000051c48211a3decc253fb35957.png" alt="HuntArts" class="w-10 h-10 rounded-xl object-cover">
+        <span class="font-display font-bold text-xl">Hunt<span class="text-cyan-400">Arts</span></span>
+      </a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium">
+        <a href="index.html" class="nav-link text-white/70 hover:text-white">Home</a>
+        <a href="about.html" class="nav-link text-white/70 hover:text-white">About</a>
+        <a href="services.html" class="nav-link text-white/70 hover:text-white">Services</a>
+        <a href="portfolio.html" class="nav-link text-white/70 hover:text-white">Portfolio</a>
+        <a href="pricing.html" class="nav-link active text-white">Pricing</a>
+        <a href="free-edits.html" class="nav-link text-white/70 hover:text-white">Free Edits</a>
+        <a href="contact.html" class="nav-link text-white/70 hover:text-white">Contact</a>
+      </div>
+      <a href="contact.html" class="px-5 py-2.5 bg-gradient-to-r from-cyan-500 to-cyan-600 text-navy-900 font-bold rounded-full text-sm">Get Started</a>
+    </div>
+  </nav>
+
+  <header class="pt-32 pb-16">
+    <div class="max-w-4xl mx-auto px-5 text-center">
+      <p class="text-cyan-400 font-semibold tracking-widest uppercase text-xs mb-3">Investment</p>
+      <h1 class="font-display font-extrabold text-4xl md:text-5xl mb-5">Clear Packages. Custom Quotes.</h1>
+      <p class="text-white/60">Transparent tiers. Bundle services for better value. Free sample edits available daily after sign-up.</p>
+    </div>
+  </header>
+
+  <main class="pb-24">
+    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-3 gap-6">
+      <div class="glass rounded-3xl p-8">
+        <h3 class="font-display font-bold text-xl mb-1">Starter</h3>
+        <p class="text-white/45 text-sm mb-6">Individuals & single projects</p>
+        <p class="font-display font-extrabold text-3xl mb-6">Custom</p>
+        <ul class="space-y-3 text-sm text-white/65 mb-8">
+          <li>✓ Single service focus</li>
+          <li>✓ Standard delivery</li>
+          <li>✓ Email support</li>
+        </ul>
+        <a href="contact.html" class="block text-center py-3 rounded-full border border-white/15 hover:bg-white/5 font-semibold transition">Request Quote</a>
+      </div>
+      <div class="glass rounded-3xl p-8 border-cyan-500/40 relative scale-105 shadow-xl shadow-cyan-500/10">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-cyan-500 text-navy-900 text-xs font-bold rounded-full">MOST POPULAR</div>
+        <h3 class="font-display font-bold text-xl mb-1">Growth</h3>
+        <p class="text-white/45 text-sm mb-6">Growing brands & multi-service</p>
+        <p class="font-display font-extrabold text-3xl mb-6">Custom</p>
+        <ul class="space-y-3 text-sm text-white/65 mb-8">
+          <li>✓ Multi-service bundles</li>
+          <li>✓ Priority delivery</li>
+          <li>✓ Dedicated support</li>
+          <li>✓ Strategy sessions</li>
+        </ul>
+        <a href="contact.html" class="block text-center py-3 rounded-full bg-cyan-500 text-navy-900 font-bold hover:bg-cyan-400 transition">Request Quote</a>
+      </div>
+      <div class="glass rounded-3xl p-8">
+        <h3 class="font-display font-bold text-xl mb-1">Enterprise</h3>
+        <p class="text-white/45 text-sm mb-6">Full digital transformation</p>
+        <p class="font-display font-extrabold text-3xl mb-6">Custom</p>
+        <ul class="space-y-3 text-sm text-white/65 mb-8">
+          <li>✓ Complete digital suite</li>
+          <li>✓ Dedicated team</li>
+          <li>✓ Retainers available</li>
+          <li>✓ Cluster / advanced infra</li>
+        </ul>
+        <a href="contact.html" class="block text-center py-3 rounded-full border border-white/15 hover:bg-white/5 font-semibold transition">Request Quote</a>
+      </div>
+    </div>
+    <div class="max-w-3xl mx-auto px-5 mt-16 text-center">
+      <p class="text-white/50 mb-4">Want to test quality first?</p>
+      <a href="free-edits.html" class="inline-flex px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 font-bold rounded-full">Start with 2 Free Daily Edits</a>
+    </div>
+  </main>
+
+  <footer class="py-12 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-5 text-center text-sm text-white/40">© 2026 HuntArts · In collaboration with Ronald Studios</div>
+  </footer>
+
+  <a href="https://wa.me/256754595667" target="_blank" class="fixed bottom-6 left-6 z-40 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <div class="fixed bottom-6 right-6 z-40">
+    <button onclick="document.getElementById('chat-panel').classList.toggle('hidden')" class="w-14 h-14 rounded-full bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center shadow-lg shadow-cyan-500/40 hover:scale-110 transition">
+      <svg class="w-7 h-7 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+    </button>
+    <div id="chat-panel" class="hidden absolute bottom-16 right-0 w-80 glass rounded-2xl shadow-2xl overflow-hidden">
+      <div class="bg-gradient-to-r from-cyan-600 to-cyan-500 px-4 py-3 flex justify-between">
+        <span class="font-display font-bold text-navy-900 text-sm">HuntArts AI</span>
+        <button onclick="document.getElementById('chat-panel').classList.add('hidden')">✕</button>
+      </div>
+      <div class="p-4 h-48 text-sm text-white/80">Coming soon.</div>
+      <div class="px-3 pb-3 text-center"><a href="https://wa.me/256754595667" class="text-xs text-cyan-400">WhatsApp →</a></div>
+    </div>
+  </div>
+</body>
+</html>

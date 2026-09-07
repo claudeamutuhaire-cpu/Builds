@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — HuntArts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 950: '#060d1a', 900: '#0a1628', 800: '#0f2137', 700: '#1a365d' },
+            cyan: { 400: '#22d3ee', 500: '#06b6d4', 600: '#0891b2' },
+            gold: { 400: '#fbbf24', 500: '#f59e0b' }
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], display: ['Montserrat', 'Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .glass { background: rgba(15, 33, 55, 0.65); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); }
+    .card-hover { transition: all 0.35s cubic-bezier(0.4,0,0.2,1); }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 25px 50px -12px rgba(6,182,212,0.2); }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background: linear-gradient(90deg,#22d3ee,#fbbf24); transition: width 0.3s; }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+  </style>
+</head>
+<body class="bg-navy-950 text-white font-sans antialiased">
+
+  <nav class="fixed top-0 inset-x-0 z-50 glass">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/file_0000000051c48211a3decc253fb35957.png" alt="HuntArts" class="w-10 h-10 rounded-xl object-cover">
+        <span class="font-display font-bold text-xl">Hunt<span class="text-cyan-400">Arts</span></span>
+      </a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium">
+        <a href="index.html" class="nav-link text-white/70 hover:text-white">Home</a>
+        <a href="about.html" class="nav-link text-white/70 hover:text-white">About</a>
+        <a href="services.html" class="nav-link active text-white">Services</a>
+        <a href="portfolio.html" class="nav-link text-white/70 hover:text-white">Portfolio</a>
+        <a href="pricing.html" class="nav-link text-white/70 hover:text-white">Pricing</a>
+        <a href="free-edits.html" class="nav-link text-white/70 hover:text-white">Free Edits</a>
+        <a href="contact.html" class="nav-link text-white/70 hover:text-white">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="px-5 py-2.5 bg-gradient-to-r from-cyan-500 to-cyan-600 text-navy-900 font-bold rounded-full text-sm shadow-lg shadow-cyan-500/25">Get Started</a>
+        <button id="mobile-btn" class="lg:hidden p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/5 bg-navy-900">
+      <div class="px-5 py-4 flex flex-col gap-3 text-sm">
+        <a href="index.html" class="text-white/70">Home</a>
+        <a href="about.html" class="text-white/70">About</a>
+        <a href="services.html" class="text-cyan-400 font-medium">Services</a>
+        <a href="portfolio.html" class="text-white/70">Portfolio</a>
+        <a href="pricing.html" class="text-white/70">Pricing</a>
+        <a href="free-edits.html" class="text-white/70">Free Edits</a>
+        <a href="contact.html" class="text-white/70">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="pt-32 pb-16">
+    <div class="max-w-7xl mx-auto px-5 text-center">
+      <p class="text-cyan-400 font-semibold tracking-widest uppercase text-xs mb-3">What We Offer</p>
+      <h1 class="font-display font-extrabold text-4xl md:text-6xl mb-6">Nine Premium Services</h1>
+      <p class="text-white/60 max-w-2xl mx-auto text-lg">Every capability a modern brand needs — delivered with precision, speed and creative excellence. In collaboration with Ronald Studios.</p>
+    </div>
+  </header>
+
+  <main class="pb-24">
+    <div class="max-w-7xl mx-auto px-5 space-y-8">
+
+      <!-- 1 Website -->
+      <section id="web" class="glass rounded-3xl p-8 md:p-10 card-hover">
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          <div class="w-16 h-16 rounded-2xl bg-cyan-500/15 flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="flex-1">
+            <h2 class="font-display font-bold text-2xl mb-3">Website Development</h2>
+            <p class="text-white/60 leading-relaxed mb-5">Custom websites, headless CMS, high-converting e-commerce platforms and fully responsive experiences engineered for speed, SEO and conversion. We build sites that look exceptional and perform even better.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">Custom Design</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">CMS</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">E-commerce</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">Performance</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2 Social -->
+      <section id="social" class="glass rounded-3xl p-8 md:p-10 card-hover">
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          <div class="w-16 h-16 rounded-2xl bg-cyan-500/15 flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg>
+          </div>
+          <div class="flex-1">
+            <h2 class="font-display font-bold text-2xl mb-3">Social Accounts & Brand Promotion</h2>
+            <p class="text-white/60 leading-relaxed mb-5">Full-service social media management, strategic content calendars, influencer outreach and reputation management. We grow authentic audiences and protect brand equity across every platform.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">Management</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">Influencer</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">Reputation</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 Marketing -->
+      <section id="marketing" class="glass rounded-3xl p-8 md:p-10 card-hover">
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          <div class="w-16 h-16 rounded-2xl bg-cyan-500/15 flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          </div>
+          <div class="flex-1">
+            <h2 class="font-display font-bold text-2xl mb-3">Digital Marketing</h2>
+            <p class="text-white/60 leading-relaxed mb-5">Data-driven SEO, high-ROI PPC campaigns, content marketing and conversion rate optimization. We turn attention into measurable revenue.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">SEO</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">PPC</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">Content</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 Photo Video -->
+      <section id="photo" class="glass rounded-3xl p-8 md:p-10 card-hover">
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          <div class="w-16 h-16 rounded-2xl bg-gold-500/15 flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="flex-1">
+            <h2 class="font-display font-bold text-2xl mb-3">Photo & Video Editing</h2>
+            <p class="text-white/60 leading-relaxed mb-5">Professional retouching, cinematic color grading, motion graphics and end-to-end video production. Your visuals will stop the scroll and elevate the brand.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-gold-500/10 text-gold-300 text-xs font-medium">Retouching</span>
+              <span class="px-3 py-1 rounded-full bg-gold-500/10 text-gold-300 text-xs font-medium">Color Grade</span>
+              <span class="px-3 py-1 rounded-full bg-gold-500/10 text-gold-300 text-xs font-medium">Motion</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 Apps -->
+      <section id="apps" class="glass rounded-3xl p-8 md:p-10 card-hover">
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          <div class="w-16 h-16 rounded-2xl bg-cyan-500/15 flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="flex-1">
+            <h2 class="font-display font-bold text-2xl mb-3">App Building</h2>
+            <p class="text-white/60 leading-relaxed mb-5">Native and cross-platform mobile apps plus progressive web apps. Beautiful interfaces, robust backends and seamless user experiences that scale with your growth.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">iOS & Android</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">PWA</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">UI/UX</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 Database -->
+      <section id="database" class="glass rounded-3xl p-8 md:p-10 card-hover">
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          <div class="w-16 h-16 rounded-2xl bg-cyan-500/15 flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+          </div>
+          <div class="flex-1">
+            <h2 class="font-display font-bold text-2xl mb-3">Database Management</h2>
+            <p class="text-white/60 leading-relaxed mb-5">Secure cloud databases, data architecture, backups, analysis and compliance-ready infrastructure. We keep your data fast, safe and always available. Cluster setups available on request.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">Cloud</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">Security</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">Clusters</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 Hosting -->
+      <section id="hosting" class="glass rounded-3xl p-8 md:p-10 card-hover">
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          <div class="w-16 h-16 rounded-2xl bg-cyan-500/15 flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+          </div>
+          <div class="flex-1">
+            <h2 class="font-display font-bold text-2xl mb-3">Subdomains & Hosting</h2>
+            <p class="text-white/60 leading-relaxed mb-5">Custom subdomain packages, dedicated and managed hosting, SSL, CDN and server monitoring. Rock-solid uptime so your digital presence never sleeps.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">Managed Hosting</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">Subdomains</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">SSL & CDN</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8 Video Content -->
+      <section id="video" class="glass rounded-3xl p-8 md:p-10 card-hover">
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          <div class="w-16 h-16 rounded-2xl bg-gold-500/15 flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="flex-1">
+            <h2 class="font-display font-bold text-2xl mb-3">Video Editing & Content Creation</h2>
+            <p class="text-white/60 leading-relaxed mb-5">Full video production pipeline — concept, shoot, edit, animation and distribution-ready assets. Content that educates, entertains and converts.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-gold-500/10 text-gold-300 text-xs font-medium">Production</span>
+              <span class="px-3 py-1 rounded-full bg-gold-500/10 text-gold-300 text-xs font-medium">Animation</span>
+              <span class="px-3 py-1 rounded-full bg-gold-500/10 text-gold-300 text-xs font-medium">Storytelling</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9 Software -->
+      <section id="software" class="glass rounded-3xl p-8 md:p-10 card-hover">
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+          <div class="w-16 h-16 rounded-2xl bg-cyan-500/15 flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          </div>
+          <div class="flex-1">
+            <h2 class="font-display font-bold text-2xl mb-3">Software Development</h2>
+            <p class="text-white/60 leading-relaxed mb-5">Custom software, internal tools, automation systems and AI-assisted solutions tailored exactly to your workflows. We remove friction and multiply output.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">Custom Software</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">Automation</span>
+              <span class="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs font-medium">Integrations</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="max-w-3xl mx-auto px-5 mt-16 text-center">
+      <p class="text-white/50 mb-6">Ready to start a project or need a custom package?</p>
+      <a href="contact.html" class="inline-flex px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-navy-900 font-bold rounded-full shadow-lg shadow-cyan-500/30">Talk to Us</a>
+    </div>
+  </main>
+
+  <footer class="py-12 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
+      <p>© 2026 HuntArts · In collaboration with Ronald Studios</p>
+      <div class="flex gap-6">
+        <a href="mailto:claudeamutuhaire@gmail.com" class="hover:text-cyan-400">claudeamutuhaire@gmail.com</a>
+        <a href="https://wa.me/256754595667" class="hover:text-cyan-400">+256 754 595 667</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp + Chatbot (same as home) -->
+  <a href="https://wa.me/256754595667" target="_blank" class="fixed bottom-6 left-6 z-40 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <div class="fixed bottom-6 right-6 z-40">
+    <button onclick="document.getElementById('chat-panel').classList.toggle('hidden')" class="w-14 h-14 rounded-full bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center shadow-lg shadow-cyan-500/40 hover:scale-110 transition">
+      <svg class="w-7 h-7 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+    </button>
+    <div id="chat-panel" class="hidden absolute bottom-16 right-0 w-80 glass rounded-2xl shadow-2xl overflow-hidden">
+      <div class="bg-gradient-to-r from-cyan-600 to-cyan-500 px-4 py-3 flex justify-between items-center">
+        <span class="font-display font-bold text-navy-900 text-sm">HuntArts AI</span>
+        <button onclick="document.getElementById('chat-panel').classList.add('hidden')" class="text-navy-900/70">✕</button>
+      </div>
+      <div class="p-4 h-52 text-sm text-white/80">Coming soon. Chat with us on WhatsApp for instant help.</div>
+      <div class="px-3 pb-3 text-center"><a href="https://wa.me/256754595667" class="text-xs text-cyan-400">Open WhatsApp →</a></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('mobile-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+  </script>
+</body>
+</html>
