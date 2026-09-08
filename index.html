@@ -1,72 +1,285 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0B2A16" />
-  <meta name="description" content="Hunt Arts field-tested hunting apparel. Built in Uganda for the wild." />
-  <title>Hunt Arts | Field-tested gear</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="manifest" href="manifest.json" />
+  <title>HuntArts — Empowering Your Digital Future</title>
+  <meta name="description" content="HuntArts is a premium digital powerhouse. Websites, apps, marketing, photo & video editing, and more. In collaboration with Ronald Studios." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 950: '#060d1a', 900: '#0a1628', 800: '#0f2137', 700: '#1a365d', 600: '#2a4a7f' },
+            cyan: { 400: '#22d3ee', 500: '#06b6d4', 600: '#0891b2' },
+            gold: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Montserrat', 'Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root { --forest:#0B2A16; --black:#0A0A0A; --sand:#D8C3A5; --orange:#FF4D00; --muted:#9b9b91; --line:rgba(216,195,165,.18); }
-    * { box-sizing:border-box; } html { scroll-behavior:smooth; } body { margin:0; background:var(--black); color:#f5f1e9; font-family:Inter, sans-serif; overflow-x:hidden; }
-    a { color:inherit; text-decoration:none; } button { border:0; font:inherit; cursor:pointer; } .container { width:min(1240px, calc(100% - 48px)); margin:auto; }
-    .eyebrow { color:var(--orange); font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; } .display { font-family:'Bebas Neue', sans-serif; font-weight:400; letter-spacing:.015em; text-transform:uppercase; }
-    .topline { background:var(--orange); color:var(--black); padding:9px 16px; text-align:center; font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
-    header { position:fixed; z-index:10; top:29px; left:0; right:0; padding:18px 0; transition:.3s; } header.scrolled { background:rgba(10,10,10,.86); backdrop-filter:blur(18px); border-bottom:1px solid var(--line); top:0; }
-    .nav { display:flex; align-items:center; justify-content:space-between; gap:24px; } .brand { display:flex; align-items:center; gap:10px; font-size:16px; font-weight:700; letter-spacing:.09em; } .brand-mark { width:28px; height:28px; display:grid; place-items:center; border:1px solid var(--sand); color:var(--sand); font-family:'Bebas Neue'; font-size:18px; }
-    .navlinks { display:flex; gap:30px; color:#d1cdc2; font-size:12px; text-transform:uppercase; letter-spacing:.12em; } .navlinks a:hover { color:var(--orange); } .nav-actions { display:flex; gap:14px; align-items:center; }
-    .icon-btn { position:relative; background:none; color:#f5f1e9; padding:8px; } .icon-btn svg { width:20px; height:20px; } .badge { position:absolute; right:1px; top:0; display:grid; place-items:center; width:15px; height:15px; border-radius:50%; background:var(--orange); color:#111; font-size:9px; font-weight:700; }
-    .hero { min-height:780px; height:100svh; position:relative; display:flex; align-items:end; overflow:hidden; background:linear-gradient(90deg,rgba(5,11,7,.85) 0%,rgba(5,11,7,.35) 55%,rgba(5,11,7,.18)), url('https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2200&q=85') center/cover; }
-    .hero:after { content:''; position:absolute; inset:auto 0 0; height:36%; background:linear-gradient(transparent,var(--black)); } .hero-copy { position:relative; z-index:1; padding-bottom:86px; max-width:700px; } h1 { font-size:clamp(62px, 10vw, 142px); line-height:.82; margin:18px 0 27px; } .hero-copy p { max-width:420px; color:#d2d0c8; line-height:1.7; font-size:14px; }
-    .actions { display:flex; flex-wrap:wrap; gap:11px; margin-top:30px; } .btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:48px; padding:0 22px; font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; transition:.25s; } .btn:hover { transform:scale(1.02); box-shadow:0 12px 28px rgba(0,0,0,.3); } .btn:active { transform:scale(.98); } .btn-primary { background:var(--orange); color:#0b0b0a; } .btn-ghost { border:1px solid rgba(245,241,233,.45); color:#fff; background:rgba(10,10,10,.15); }
-    .ticker { border-top:1px solid var(--line); border-bottom:1px solid var(--line); overflow:hidden; white-space:nowrap; padding:17px 0; color:var(--sand); } .ticker-track { display:inline-block; animation:marquee 24s linear infinite; } .ticker span { margin:0 20px; font-family:'Bebas Neue'; font-size:24px; letter-spacing:.08em; } .ticker i { color:var(--orange); font-style:normal; } @keyframes marquee { to { transform:translateX(-50%); } }
-    section { padding:110px 0; } .section-head { display:flex; justify-content:space-between; gap:20px; align-items:end; margin-bottom:34px; } h2 { font-size:clamp(44px,6vw,76px); line-height:.9; margin:10px 0 0; } .section-link { font-size:11px; color:var(--sand); text-transform:uppercase; letter-spacing:.13em; border-bottom:1px solid var(--orange); padding-bottom:6px; }
-    .product-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; } .product-card { min-width:0; } .product-image { position:relative; overflow:hidden; aspect-ratio: .79; background:#18251c; } .product-image img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .65s cubic-bezier(.2,.8,.2,1); } .product-card:hover img { transform:scale(1.1); } .product-tag { position:absolute; top:12px; left:12px; padding:6px 8px; background:var(--orange); color:#111; font-size:9px; font-weight:700; letter-spacing:.1em; } .quick-add { position:absolute; left:12px; right:12px; bottom:12px; height:42px; background:#f5f1e9; color:#111; font-size:10px; font-weight:700; letter-spacing:.1em; transform:translateY(12px); opacity:0; transition:.25s; } .product-card:hover .quick-add { transform:none; opacity:1; } .product-meta { padding:16px 0; display:flex; justify-content:space-between; gap:10px; font-size:12px; } .product-meta small { color:var(--muted); display:block; margin-top:6px; font-size:10px; text-transform:uppercase; letter-spacing:.1em; } .price { color:var(--sand); font-weight:600; }
-    .split { display:grid; grid-template-columns:1.1fr .9fr; gap:16px; } .feature { min-height:520px; padding:32px; display:flex; flex-direction:column; justify-content:end; background-position:center; background-size:cover; position:relative; overflow:hidden; } .feature:after { content:''; position:absolute; inset:35% 0 0; background:linear-gradient(transparent,rgba(0,0,0,.85)); } .feature > * { position:relative; z-index:1; } .feature h3 { margin:7px 0; font-size:47px; line-height:.88; } .feature p { max-width:330px; color:#cecac0; font-size:13px; line-height:1.6; } .feature-main { background-image:url('https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=1400&q=85'); } .feature-side { background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1000&q=85'); }
-    .shop-section { background:#11140f; } .shop-layout { display:grid; grid-template-columns:190px 1fr; gap:42px; } .filters { padding-top:8px; } .filters label { display:block; padding:13px 0; color:#999b91; font-size:12px; border-bottom:1px solid var(--line); cursor:pointer; } .filters input { accent-color:var(--orange); margin-right:10px; } .filter-note { color:var(--muted); font-size:11px; line-height:1.6; margin-top:28px; }
-    .product-detail { display:grid; grid-template-columns:1.05fr .95fr; gap:70px; align-items:start; } .detail-media { display:grid; grid-template-columns:74px 1fr; gap:12px; position:sticky; top:90px; } .thumbs { display:flex; flex-direction:column; gap:9px; } .thumb { border:1px solid transparent; padding:0; background:none; aspect-ratio:1; overflow:hidden; } .thumb.active { border-color:var(--orange); } .thumb img { width:100%; height:100%; object-fit:cover; } .main-product-image { aspect-ratio:.88; overflow:hidden; background:#15251b; } .main-product-image img { width:100%; height:100%; object-fit:cover; transition:opacity .2s; } .detail h2 { font-size:clamp(48px,6vw,80px); margin:12px 0 14px; } .stars { color:var(--orange); letter-spacing:.1em; font-size:14px; } .review-link { color:var(--muted); font-size:11px; margin-left:10px; } .detail-price { font-size:20px; color:var(--sand); margin:25px 0 28px; } .option-label { margin:25px 0 10px; font-size:10px; text-transform:uppercase; letter-spacing:.14em; color:var(--muted); } .swatches { display:flex; gap:9px; } .swatch { width:34px; height:34px; border:2px solid transparent; padding:3px; background:none; } .swatch.active { border-color:var(--orange); } .swatch span { display:block; width:100%; height:100%; background:#45513e; } .swatch:nth-child(2) span { background:#252d28; } .sizes { display:flex; gap:7px; } .size { min-width:43px; height:38px; background:transparent; border:1px solid var(--line); color:#f5f1e9; font-size:11px; } .size.active, .size:hover { border-color:var(--sand); } .purchase-row { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:28px; } .purchase-row .btn { padding:0 10px; } .whatsapp { background:#315e3d; color:#f5f1e9; } .stock { color:#e6ad89; font-size:11px; margin:17px 0; } .accordion { margin-top:34px; border-top:1px solid var(--line); } .accordion-item { border-bottom:1px solid var(--line); } .accordion button { color:#f5f1e9; background:none; width:100%; padding:19px 0; display:flex; justify-content:space-between; text-align:left; text-transform:uppercase; letter-spacing:.12em; font-size:11px; } .accordion-content { display:none; color:var(--muted); font-size:12px; line-height:1.7; padding:0 0 18px; max-width:480px; } .accordion-item.open .accordion-content { display:block; }
-    .social-proof { background:var(--forest); } .quote { max-width:670px; margin:0 auto; text-align:center; } .quote blockquote { font-family:'Bebas Neue'; font-size:clamp(36px,5vw,64px); line-height:.95; margin:24px 0; } .quote cite { color:var(--sand); font-style:normal; font-size:11px; letter-spacing:.13em; text-transform:uppercase; }
-    footer { border-top:1px solid var(--line); padding:46px 0; } .footer-grid { display:flex; justify-content:space-between; gap:30px; align-items:start; } .footer-grid p { color:var(--muted); font-size:12px; line-height:1.7; max-width:250px; } .footer-links { display:flex; gap:25px; color:#bbb7ad; font-size:11px; text-transform:uppercase; letter-spacing:.1em; }
-    .cart-drawer { position:fixed; z-index:30; inset:0 0 0 auto; width:min(420px,100%); background:#121711; transform:translateX(100%); transition:.4s cubic-bezier(.2,.8,.2,1); padding:27px; box-shadow:-20px 0 60px rgba(0,0,0,.35); } .cart-drawer.open { transform:none; } .drawer-overlay { position:fixed; z-index:29; inset:0; background:rgba(0,0,0,.6); opacity:0; visibility:hidden; transition:.3s; } .drawer-overlay.open { opacity:1; visibility:visible; } .drawer-head { display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--line); padding-bottom:20px; } .drawer-close { background:none; color:white; font-size:24px; } .cart-empty { color:var(--muted); font-size:13px; margin-top:60px; text-align:center; } .cart-item { display:flex; gap:12px; padding:18px 0; border-bottom:1px solid var(--line); } .cart-item img { width:62px; height:75px; object-fit:cover; } .cart-item div { flex:1; font-size:12px; } .cart-item p { color:var(--muted); font-size:10px; } .cart-total { display:flex; justify-content:space-between; margin:22px 0; font-weight:700; }
-    .mobile-cart { display:none; } @media (max-width:820px) { .container { width:min(100% - 32px, 640px); } header { top:29px; } .navlinks { display:none; } .hero { min-height:680px; } .hero-copy { padding-bottom:55px; } section { padding:76px 0; } .product-grid { grid-template-columns:repeat(2,1fr); gap:18px 10px; } .quick-add { transform:none; opacity:1; left:7px; right:7px; bottom:7px; height:35px; font-size:9px; } .split { grid-template-columns:1fr; } .feature { min-height:400px; } .feature-side { min-height:300px; } .shop-layout { display:block; } .filters { display:flex; gap:9px; overflow:auto; padding-bottom:22px; } .filters label { flex:none; border:1px solid var(--line); padding:10px 12px; } .filter-note { display:none; } .product-detail { grid-template-columns:1fr; gap:38px; } .detail-media { position:static; grid-template-columns:1fr; } .thumbs { order:2; flex-direction:row; } .thumb { width:58px; } .main-product-image { aspect-ratio:1; } .mobile-cart { display:flex; position:fixed; z-index:8; bottom:0; left:0; right:0; background:#f5f1e9; padding:10px 16px; justify-content:space-between; align-items:center; color:#111; } .mobile-cart .btn { min-height:42px; } .footer-grid { display:block; } .footer-links { margin-top:28px; flex-wrap:wrap; } }
-    @media (prefers-reduced-motion:reduce) { *, *:before, *:after { animation-duration:.01ms !important; transition-duration:.01ms !important; } }
+    html { scroll-behavior: smooth; }
+    .gradient-text { background: linear-gradient(135deg, #22d3ee, #06b6d4 50%, #fbbf24); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .glass { background: rgba(15, 33, 55, 0.65); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.08); }
+    .card-hover { transition: all 0.35s cubic-bezier(0.4,0,0.2,1); }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 25px 50px -12px rgba(6,182,212,0.2); }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background: linear-gradient(90deg,#22d3ee,#fbbf24); transition: width 0.3s; }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
   </style>
 </head>
-<body>
-  <div class="topline">Free delivery across Uganda on orders over UGX 250,000</div>
-  <header id="header"><div class="container nav"><a class="brand" href="#top"><span class="brand-mark">HA</span> HUNT ARTS</a><nav class="navlinks"><a href="#shop">Shop</a><a href="#field-notes">Field notes</a><a href="#story">Our story</a></nav><div class="nav-actions"><button class="icon-btn" aria-label="Search"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m16 16 4 4"/></svg></button><button class="icon-btn" id="cart-open" aria-label="Open cart"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 8h14l-1 11H6L5 8Z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><span class="badge" id="cart-count">0</span></button></div></div></header>
-  <main id="top">
-    <section class="hero"><div class="container hero-copy"><div class="eyebrow">Born in Uganda / Est. 2024</div><h1 class="display">Gear built<br>for the hunt.</h1><p>Hardwearing apparel for long days, rough country and the stories you bring back. Designed in Kampala. Tested in the bush.</p><div class="actions"><a class="btn btn-primary" href="#shop">Shop the drop <span>↗</span></a><a class="btn btn-ghost" href="#field-notes">Watch field test <span>▶</span></a></div></div></section>
-    <div class="ticker"><div class="ticker-track"><span>Field tested in Uganda <i>✳</i></span><span>Field tested in Uganda <i>✳</i></span><span>Field tested in Uganda <i>✳</i></span><span>Field tested in Uganda <i>✳</i></span><span>Field tested in Uganda <i>✳</i></span></div></div>
-    <section id="shop"><div class="container"><div class="section-head"><div><div class="eyebrow">The essentials</div><h2 class="display">Best sellers</h2></div><a class="section-link" href="#all-products">View all pieces →</a></div><div class="shop-layout"><aside class="filters"><label><input type="checkbox" value="all" checked> All pieces</label><label><input type="checkbox" value="overshirt"> Camo</label><label><input type="checkbox" value="headwear"> Caps</label><label><input type="checkbox" value="base-layer"> Shirts</label><label><input type="checkbox" value="trousers"> Tactical</label><p class="filter-note">Small-batch gear.<br>Made for Uganda.</p></aside><div class="product-grid" id="all-products"></div></div></div></section>
-    <section id="field-notes"><div class="container"><div class="section-head"><div><div class="eyebrow">From the field</div><h2 class="display">Made for<br>the outside.</h2></div><p style="max-width:260px;color:var(--muted);font-size:12px;line-height:1.7;margin:0">Every Hunt Arts piece earns its place. See how the first drop handles red dust, hard rain and early starts.</p></div><div class="split"><article class="feature feature-main"><div class="eyebrow">Field test / 001</div><h3 class="display">The long<br>walk home</h3><p>A day in the Karamoja bush with the people who put our kit through its paces.</p><a class="section-link" href="#product">Play film ↗</a></article><article class="feature feature-side"><div class="eyebrow">Journal / 004</div><h3 class="display">The right<br>kind of quiet</h3><p>Notes on patience, place and moving with the land.</p><a class="section-link" href="#story">Read the story ↗</a></article></div></div></section>
-    <section class="shop-section" id="product"><div class="container"><div class="product-detail"><div class="detail-media"><div class="thumbs" id="thumbs"></div><div class="main-product-image"><img id="main-image" src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1200&q=85" alt="Rift overshirt in olive" /></div></div><div class="detail"><div class="eyebrow">The first drop / 01</div><h2 class="display">Rift overshirt</h2><div><span class="stars">★★★★★</span><span class="review-link">18 field reviews</span></div><div class="detail-price">UGX 285,000</div><p style="color:var(--muted);font-size:13px;line-height:1.7;max-width:490px">A breathable, abrasion-resistant overshirt cut for movement. Six pockets. Reinforced elbows. The layer you reach for before you know where the day is going.</p><div class="option-label">Colour: <span id="color-label" style="color:#f5f1e9">Olive</span></div><div class="swatches"><button class="swatch active" data-image="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1200&q=85" data-color="Olive"><span></span></button><button class="swatch" data-image="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1200&q=85" data-color="Black"><span></span></button></div><div class="option-label">Size</div><div class="sizes"><button class="size">S</button><button class="size active">M</button><button class="size">L</button><button class="size">XL</button></div><div class="purchase-row"><button class="btn btn-primary" id="add-detail">Add to cart</button><a class="btn whatsapp" href="https://wa.me/256700000000?text=Hello%20Hunt%20Arts%2C%20I%27d%20like%20the%20Rift%20Overshirt" target="_blank" rel="noreferrer">◉ WhatsApp</a></div><div class="stock">● Only 3 left — hunters are buying</div><div class="accordion"><div class="accordion-item open"><button>Materials <span>−</span></button><div class="accordion-content">220gsm ripstop cotton blend, DWR finish, YKK hardware and bar-tacked stress points.</div></div><div class="accordion-item"><button>Sizing <span>+</span></button><div class="accordion-content">True to size with room for a base layer. Model is 183cm and wears a medium.</div></div><div class="accordion-item"><button>Shipping & returns <span>+</span></button><div class="accordion-content">Kampala delivery in 1–2 days. Upcountry delivery in 2–5 days. Easy exchanges within 14 days.</div></div></div></div></div></div></section>
-    <section id="story" class="social-proof"><div class="container"><div class="quote"><div class="eyebrow">The Hunt Arts code</div><blockquote>“The bush does not care what your kit costs. It only cares if it works.”</blockquote><cite>— Daniel K. / Hunt Arts field tester</cite></div></div></section>
-  </main>
-  <div class="drawer-overlay" id="overlay"></div><aside class="cart-drawer" id="cart-drawer"><div class="drawer-head"><span class="display" style="font-size:30px">Your pack</span><button class="drawer-close" id="cart-close">×</button></div><div id="cart-items"><p class="cart-empty">Your pack is empty.<br>Start with something field-tested.</p></div><div id="cart-footer" style="display:none"><div class="cart-total"><span>Total</span><span>UGX <span id="cart-total">0</span></span></div><button class="btn btn-primary" style="width:100%">Checkout securely</button></div></aside>
-  <div class="mobile-cart"><span><strong>Rift Overshirt</strong><br><small>UGX 285,000</small></span><button class="btn btn-primary" id="mobile-add">Add to pack</button></div>
-  <footer><div class="container footer-grid"><div><a class="brand" href="#top"><span class="brand-mark">HA</span> HUNT ARTS</a><p>Field-tested apparel from Uganda.<br>Built for the outside.</p></div><div class="footer-links"><a href="#shop">Shop</a><a href="#field-notes">Journal</a><a href="#story">Instagram</a><a href="#top">Contact</a></div></div></footer>
+<body class="bg-navy-950 text-white font-sans antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 inset-x-0 z-50 glass">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/file_0000000051c48211a3decc253fb35957.png" alt="HuntArts" class="w-10 h-10 rounded-xl object-cover">
+        <span class="font-display font-bold text-xl">Hunt<span class="text-cyan-400">Arts</span></span>
+      </a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium">
+        <a href="index.html" class="nav-link active text-white">Home</a>
+        <a href="about.html" class="nav-link text-white/70 hover:text-white">About</a>
+        <a href="services.html" class="nav-link text-white/70 hover:text-white">Services</a>
+        <a href="portfolio.html" class="nav-link text-white/70 hover:text-white">Portfolio</a>
+        <a href="pricing.html" class="nav-link text-white/70 hover:text-white">Pricing</a>
+        <a href="free-edits.html" class="nav-link text-white/70 hover:text-white">Free Edits</a>
+        <a href="contact.html" class="nav-link text-white/70 hover:text-white">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="free-edits.html" class="hidden sm:inline-flex px-4 py-2 text-sm font-semibold rounded-full border border-cyan-500/40 text-cyan-300 hover:bg-cyan-500/10 transition">Free Tier</a>
+        <a href="contact.html" class="px-5 py-2.5 bg-gradient-to-r from-cyan-500 to-cyan-600 text-navy-900 font-bold rounded-full text-sm shadow-lg shadow-cyan-500/25 hover:shadow-cyan-400/40 transition">Get Started</a>
+        <button id="mobile-btn" class="lg:hidden p-2 text-white/80"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/5 bg-navy-900">
+      <div class="px-5 py-4 flex flex-col gap-3 text-sm">
+        <a href="index.html" class="text-cyan-400 font-medium">Home</a>
+        <a href="about.html" class="text-white/70">About</a>
+        <a href="services.html" class="text-white/70">Services</a>
+        <a href="portfolio.html" class="text-white/70">Portfolio</a>
+        <a href="pricing.html" class="text-white/70">Pricing</a>
+        <a href="free-edits.html" class="text-white/70">Free Edits</a>
+        <a href="contact.html" class="text-white/70">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-[140px]"></div>
+      <div class="absolute bottom-1/4 -right-32 w-[400px] h-[400px] bg-gold-500/15 rounded-full blur-[120px]"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-14 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-sm text-cyan-300 mb-7">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          In collaboration with Ronald Studios
+        </div>
+        <h1 class="font-display font-extrabold text-5xl sm:text-6xl lg:text-7xl leading-[1.05] mb-6">
+          Empowering Your<br><span class="gradient-text">Digital Future</span>
+        </h1>
+        <p class="text-lg text-white/65 max-w-lg mb-10 leading-relaxed">
+          Premium websites, powerful apps, elite photo & video editing, digital marketing and complete digital infrastructure — delivered with precision.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="services.html" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-cyan-600 text-navy-900 font-bold rounded-full shadow-xl shadow-cyan-500/30 hover:shadow-cyan-400/50 transition">Explore Services</a>
+          <a href="free-edits.html" class="px-8 py-4 glass hover:bg-white/10 font-semibold rounded-full transition">Try 2 Free Edits</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-square rounded-3xl glass flex items-center justify-center overflow-hidden relative">
+          <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-gold-500/10"></div>
+          <div class="text-center z-10 p-8">
+            <img src="assets/file_0000000051c48211a3decc253fb35957.png" alt="HuntArts Logo" class="w-28 h-28 mx-auto mb-6 rounded-2xl object-cover shadow-2xl shadow-cyan-500/30">
+            <p class="text-white/40 text-sm">HuntArts · Official Brand</p>
+          </div>
+        </div>
+        <div class="absolute -bottom-5 -left-5 w-28 h-28 rounded-2xl bg-gold-500/15 border border-gold-400/20 backdrop-blur"></div>
+        <div class="absolute -top-5 -right-5 w-20 h-20 rounded-2xl bg-cyan-500/15 border border-cyan-400/20 backdrop-blur"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK SERVICES -->
+  <section class="py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="text-center mb-14">
+        <p class="text-cyan-400 font-semibold tracking-widest uppercase text-xs mb-3">What We Deliver</p>
+        <h2 class="font-display font-bold text-4xl md:text-5xl">Nine Core Capabilities</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <a href="services.html#web" class="group glass rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/15 flex items-center justify-center mb-4 group-hover:bg-cyan-500/25 transition"><svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+          <h3 class="font-display font-bold text-lg mb-1">Website Development</h3>
+          <p class="text-white/50 text-sm">Custom, CMS, e-commerce, blazing fast.</p>
+        </a>
+        <a href="services.html#social" class="group glass rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/15 flex items-center justify-center mb-4 group-hover:bg-cyan-500/25 transition"><svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg></div>
+          <h3 class="font-display font-bold text-lg mb-1">Social & Brand</h3>
+          <p class="text-white/50 text-sm">Management, outreach, reputation.</p>
+        </a>
+        <a href="services.html#marketing" class="group glass rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/15 flex items-center justify-center mb-4 group-hover:bg-cyan-500/25 transition"><svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg></div>
+          <h3 class="font-display font-bold text-lg mb-1">Digital Marketing</h3>
+          <p class="text-white/50 text-sm">SEO, PPC, content that converts.</p>
+        </a>
+        <a href="services.html#photo" class="group glass rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-gold-500/15 flex items-center justify-center mb-4 group-hover:bg-gold-500/25 transition"><svg class="w-6 h-6 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+          <h3 class="font-display font-bold text-lg mb-1">Photo & Video Editing</h3>
+          <p class="text-white/50 text-sm">Retouch, production, motion.</p>
+        </a>
+        <a href="services.html#apps" class="group glass rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/15 flex items-center justify-center mb-4 group-hover:bg-cyan-500/25 transition"><svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg></div>
+          <h3 class="font-display font-bold text-lg mb-1">App Building</h3>
+          <p class="text-white/50 text-sm">Mobile & web apps that scale.</p>
+        </a>
+        <a href="services.html#database" class="group glass rounded-2xl p-6 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/15 flex items-center justify-center mb-4 group-hover:bg-cyan-500/25 transition"><svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg></div>
+          <h3 class="font-display font-bold text-lg mb-1">Database & Hosting</h3>
+          <p class="text-white/50 text-sm">Secure, fast, managed.</p>
+        </a>
+      </div>
+      <div class="text-center mt-10">
+        <a href="services.html" class="inline-flex items-center gap-2 text-cyan-400 font-semibold hover:text-cyan-300 transition">View all nine services <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE TIER CTA -->
+  <section class="py-20">
+    <div class="max-w-5xl mx-auto px-5">
+      <div class="relative rounded-3xl overflow-hidden glass p-10 md:p-14 text-center">
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-transparent to-gold-500/10"></div>
+        <div class="relative">
+          <p class="text-gold-400 font-semibold tracking-widest uppercase text-xs mb-3">Limited Free Access</p>
+          <h2 class="font-display font-bold text-3xl md:text-4xl mb-4">2 Free Sample Edits Daily</h2>
+          <p class="text-white/60 max-w-xl mx-auto mb-8">Sign up once. Receive two professional sample edits every day — no credit card required. Perfect for testing our quality.</p>
+          <a href="free-edits.html" class="inline-flex px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 font-bold rounded-full shadow-lg shadow-gold-500/30 hover:shadow-gold-400/50 transition">Claim Your Free Edits</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLAB -->
+  <section class="py-16 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-5 text-center">
+      <p class="text-white/40 text-sm uppercase tracking-widest mb-2">Proud Collaboration</p>
+      <p class="font-display font-bold text-2xl md:text-3xl">In collaboration with <span class="text-gold-400">Ronald Studios</span></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-16 bg-navy-900/50">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-5">
+            <img src="assets/file_0000000051c48211a3decc253fb35957.png" alt="HuntArts" class="w-10 h-10 rounded-xl object-cover">
+            <span class="font-display font-bold text-xl">Hunt<span class="text-cyan-400">Arts</span></span>
+          </div>
+          <p class="text-white/45 text-sm max-w-sm leading-relaxed mb-5">Premium digital solutions. Websites, marketing, creative production and infrastructure — executed at the highest level.</p>
+          <p class="text-sm text-white/35">In collaboration with <span class="text-gold-400">Ronald Studios</span></p>
+        </div>
+        <div>
+          <h4 class="font-display font-bold mb-4 text-sm uppercase tracking-wider text-white/60">Navigate</h4>
+          <ul class="space-y-2 text-sm text-white/50">
+            <li><a href="about.html" class="hover:text-cyan-400 transition">About</a></li>
+            <li><a href="services.html" class="hover:text-cyan-400 transition">Services</a></li>
+            <li><a href="portfolio.html" class="hover:text-cyan-400 transition">Portfolio</a></li>
+            <li><a href="pricing.html" class="hover:text-cyan-400 transition">Pricing</a></li>
+            <li><a href="free-edits.html" class="hover:text-cyan-400 transition">Free Edits</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display font-bold mb-4 text-sm uppercase tracking-wider text-white/60">Contact</h4>
+          <ul class="space-y-2 text-sm text-white/50">
+            <li><a href="mailto:claudeamutuhaire@gmail.com" class="hover:text-cyan-400 transition">claudeamutuhaire@gmail.com</a></li>
+            <li><a href="https://wa.me/256754595667" class="hover:text-cyan-400 transition">+256 754 595 667</a></li>
+            <li><a href="contact.html" class="hover:text-cyan-400 transition">Contact Form</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between gap-4 text-sm text-white/35">
+        <p>© 2026 HuntArts · Mbarara, Uganda · In collaboration with Ronald Studios</p>
+        <div class="flex flex-wrap gap-4 text-xs">
+          <a href="privacy.html" class="hover:text-cyan-400">Privacy</a>
+          <a href="terms.html" class="hover:text-cyan-400">Terms</a>
+          <a href="refund.html" class="hover:text-cyan-400">Refunds</a>
+          <a href="cookies.html" class="hover:text-cyan-400">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- COOKIE CONSENT BANNER -->
+  <div id="cookie-banner" class="fixed bottom-0 inset-x-0 z-50 p-4 hidden">
+    <div class="max-w-4xl mx-auto glass rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4 shadow-2xl">
+      <p class="text-sm text-white/80 flex-1">We use essential cookies to make this site work. See our <a href="cookies.html" class="text-cyan-400 underline">Cookies Policy</a>.</p>
+      <div class="flex gap-3">
+        <button onclick="acceptCookies()" class="px-5 py-2 bg-cyan-500 text-navy-900 font-semibold rounded-full text-sm">Accept</button>
+        <button onclick="rejectCookies()" class="px-5 py-2 border border-white/20 rounded-full text-sm hover:bg-white/5">Reject</button>
+      </div>
+    </div>
+  </div>
   <script>
-    const products = [
-      { name:'Rift overshirt', type:'Overshirt / olive', price:'285,000', image:'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=900&q=85', tag:'Best seller' },
-      { name:'Kidepo field cap', type:'Headwear / sand', price:'95,000', image:'https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&fit=crop&w=900&q=85', tag:'' },
-      { name:'Tracker utility tee', type:'Base layer / black', price:'110,000', image:'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85', tag:'New' },
-      { name:'Savanna cargo', type:'Trousers / earth', price:'240,000', image:'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=85', tag:'' }
-    ];
-    const grid = document.getElementById('all-products');
-    function renderProducts(filter = 'all') { grid.innerHTML = products.map((p, i) => ({ ...p, index:i })).filter(p => filter === 'all' || p.type.includes(filter)).map(p => `<article class="product-card"><a href="#product" class="product-image"><img src="${p.image}" alt="${p.name}">${p.tag ? `<span class="product-tag">${p.tag}</span>` : ''}<button class="quick-add" data-product="${p.index}">Quick add +</button></a><div class="product-meta"><div>${p.name}<small>${p.type}</small></div><span class="price">UGX ${p.price}</span></div></article>`).join(''); document.querySelectorAll('.quick-add').forEach(btn=>btn.onclick=e=>{e.preventDefault();addProduct(products[btn.dataset.product])}); }
-    renderProducts();
-    const drawer = document.getElementById('cart-drawer'), overlay = document.getElementById('overlay'); let cart = [];
-    function renderCart() { document.getElementById('cart-count').textContent = cart.length; const items = document.getElementById('cart-items'); document.getElementById('cart-footer').style.display = cart.length ? 'block' : 'none'; if (!cart.length) { items.innerHTML='<p class="cart-empty">Your pack is empty.<br>Start with something field-tested.</p>'; return; } items.innerHTML=cart.map(p=>`<div class="cart-item"><img src="${p.image}" alt=""><div><strong>${p.name}</strong><p>${p.type}</p><span class="price">UGX ${p.price}</span></div></div>`).join(''); document.getElementById('cart-total').textContent=cart.reduce((sum,p)=>sum+Number(p.price.replace(',','')),0).toLocaleString(); }
-    function openCart() { drawer.classList.add('open'); overlay.classList.add('open'); } function addProduct(product) { cart.push(product); renderCart(); openCart(); }
-    document.getElementById('cart-open').onclick=openCart; document.getElementById('cart-close').onclick=()=>{drawer.classList.remove('open');overlay.classList.remove('open')}; overlay.onclick=()=>{drawer.classList.remove('open');overlay.classList.remove('open')};
-    const detailProduct=products[0]; document.querySelectorAll('.filters input').forEach(input=>input.onchange=()=>{document.querySelectorAll('.filters input').forEach(other=>{if(other!==input) other.checked=false}); input.checked=true; renderProducts(input.value)}); document.getElementById('add-detail').onclick=()=>{ addProduct(detailProduct); document.getElementById('add-detail').textContent='Added ✓'; }; document.getElementById('mobile-add').onclick=()=>addProduct(detailProduct);
-    document.querySelectorAll('.swatch').forEach(s=>s.onclick=()=>{ document.querySelectorAll('.swatch').forEach(x=>x.classList.remove('active')); s.classList.add('active'); document.getElementById('main-image').src=s.dataset.image; document.getElementById('color-label').textContent=s.dataset.color; }); document.querySelectorAll('.size').forEach(s=>s.onclick=()=>{document.querySelectorAll('.size').forEach(x=>x.classList.remove('active'));s.classList.add('active')}); document.querySelectorAll('.accordion button').forEach(b=>b.onclick=()=>{const item=b.parentElement;item.classList.toggle('open');b.querySelector('span').textContent=item.classList.contains('open')?'−':'+'});
-    window.addEventListener('scroll',()=>document.getElementById('header').classList.toggle('scrolled',scrollY>40)); renderCart();
+    function acceptCookies() {
+      localStorage.setItem('huntarts-cookies', 'accepted');
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+    function rejectCookies() {
+      localStorage.setItem('huntarts-cookies', 'rejected');
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+    if (!localStorage.getItem('huntarts-cookies')) {
+      document.getElementById('cookie-banner').classList.remove('hidden');
+    }
+  </script>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/256754595667" target="_blank" rel="noopener" class="fixed bottom-6 left-6 z-40 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 hover:scale-110 transition" title="Chat on WhatsApp">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- CHATBOT PLACEHOLDER -->
+  <div id="chatbot" class="fixed bottom-6 right-6 z-40">
+    <button onclick="toggleChat()" class="w-14 h-14 rounded-full bg-gradient-to-br from-cyan-500 to-cyan-600 flex items-center justify-center shadow-lg shadow-cyan-500/40 hover:scale-110 transition">
+      <svg class="w-7 h-7 text-navy-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+    </button>
+    <div id="chat-panel" class="hidden absolute bottom-16 right-0 w-80 glass rounded-2xl shadow-2xl overflow-hidden">
+      <div class="bg-gradient-to-r from-cyan-600 to-cyan-500 px-4 py-3 flex items-center justify-between">
+        <span class="font-display font-bold text-navy-900 text-sm">HuntArts AI Assistant</span>
+        <button onclick="toggleChat()" class="text-navy-900/70 hover:text-navy-900">✕</button>
+      </div>
+      <div class="p-4 h-64 overflow-y-auto text-sm space-y-3">
+        <div class="bg-navy-800 rounded-xl rounded-tl-none px-3 py-2 text-white/80">Hello! I'm the HuntArts assistant (coming soon). For now, reach us instantly on WhatsApp or email.</div>
+        <div class="bg-navy-800 rounded-xl rounded-tl-none px-3 py-2 text-white/80">How can we help you today?</div>
+      </div>
+      <div class="p-3 border-t border-white/5 flex gap-2">
+        <input type="text" placeholder="Type a message..." class="flex-1 bg-navy-900 border border-white/10 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-cyan-500" disabled>
+        <button class="w-10 h-10 rounded-full bg-cyan-500/50 flex items-center justify-center text-navy-900" disabled>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+        </button>
+      </div>
+      <div class="px-3 pb-3 text-center">
+        <a href="https://wa.me/256754595667" class="text-xs text-cyan-400 hover:underline">Chat on WhatsApp instead →</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('mobile-btn').addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+    function toggleChat() { document.getElementById('chat-panel').classList.toggle('hidden'); }
   </script>
 </body>
 </html>

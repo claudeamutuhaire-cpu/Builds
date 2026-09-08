@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — HuntArts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 950: '#060d1a', 900: '#0a1628', 800: '#0f2137' },
+            cyan: { 400: '#22d3ee', 500: '#06b6d4' },
+            gold: { 400: '#fbbf24', 500: '#f59e0b' }
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], display: ['Montserrat', 'Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .glass { background: rgba(15, 33, 55, 0.7); backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,0.08); }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background: linear-gradient(90deg,#22d3ee,#fbbf24); transition: width 0.3s; }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+    a:focus-visible, button:focus-visible { outline: 2px solid #22d3ee; outline-offset: 2px; }
+  </style>
+</head>
+<body class="bg-navy-950 text-white font-sans antialiased">
+  <nav class="fixed top-0 inset-x-0 z-50 glass">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/file_0000000051c48211a3decc253fb35957.png" alt="HuntArts logo - geometric wolf" class="w-10 h-10 rounded-xl object-cover">
+        <span class="font-display font-bold text-xl">Hunt<span class="text-cyan-400">Arts</span></span>
+      </a>
+      <div class="hidden lg:flex items-center gap-7 text-sm font-medium">
+        <a href="index.html" class="nav-link text-white/70 hover:text-white">Home</a>
+        <a href="services.html" class="nav-link text-white/70 hover:text-white">Services</a>
+        <a href="portfolio.html" class="nav-link text-white/70 hover:text-white">Portfolio</a>
+        <a href="contact.html" class="nav-link text-white/70 hover:text-white">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-28 pb-20 max-w-3xl mx-auto px-5">
+    <h1 class="font-display font-extrabold text-4xl mb-6">Privacy Policy</h1>
+    <p class="text-white/60 mb-8">Last updated: September 2026</p>
+
+    <div class="space-y-8 text-white/80 leading-relaxed">
+      <section>
+        <h2 class="font-display font-bold text-xl text-white mb-3">1. Who we are</h2>
+        <p>HuntArts is a digital creative agency based in Mbarara, Uganda, operating in collaboration with Ronald Studios. Contact: claudeamutuhaire@gmail.com | WhatsApp +256 754 595 667.</p>
+      </section>
+
+      <section>
+        <h2 class="font-display font-bold text-xl text-white mb-3">2. Information we collect</h2>
+        <p>We only collect information you voluntarily provide through our contact forms or free-edit sign-up (name, email, phone number, and project details). We do not collect unnecessary personal data.</p>
+      </section>
+
+      <section>
+        <h2 class="font-display font-bold text-xl text-white mb-3">3. How we use your information</h2>
+        <p>Your information is used solely to respond to enquiries, deliver requested services (including free sample edits), and improve our communication with you. We do not sell or share your data with third parties for marketing.</p>
+      </section>
+
+      <section>
+        <h2 class="font-display font-bold text-xl text-white mb-3">4. Cookies</h2>
+        <p>We may use essential cookies for site functionality. See our <a href="cookies.html" class="text-cyan-400 underline">Cookies Policy</a> for details. You can manage cookie preferences via the consent banner.</p>
+      </section>
+
+      <section>
+        <h2 class="font-display font-bold text-xl text-white mb-3">5. Data security & retention</h2>
+        <p>We take reasonable measures to protect your data. Information is retained only as long as necessary to provide the service or as required by Ugandan law.</p>
+      </section>
+
+      <section>
+        <h2 class="font-display font-bold text-xl text-white mb-3">6. Your rights</h2>
+        <p>You may request access, correction, or deletion of your personal data by contacting us at claudeamutuhaire@gmail.com.</p>
+      </section>
+
+      <section>
+        <h2 class="font-display font-bold text-xl text-white mb-3">7. Contact</h2>
+        <p>For privacy questions: claudeamutuhaire@gmail.com or WhatsApp +256 754 595 667.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="py-10 border-t border-white/5 text-center text-sm text-white/40">
+    <div class="max-w-7xl mx-auto px-5">
+      <p class="mb-3">© 2026 HuntArts · In collaboration with Ronald Studios · Mbarara, Uganda</p>
+      <div class="flex flex-wrap justify-center gap-4 text-xs">
+        <a href="privacy.html" class="hover:text-cyan-400">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-cyan-400">Terms & Conditions</a>
+        <a href="refund.html" class="hover:text-cyan-400">Refund Policy</a>
+        <a href="cookies.html" class="hover:text-cyan-400">Cookies Policy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
